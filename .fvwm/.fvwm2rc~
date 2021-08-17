@@ -1,0 +1,104 @@
+Style "*" ClickToFocus
+Style "*" NoIcon
+Style "*" NoTitle
+Style "*" NoPPosition, ResizeOpaque
+SnapAttraction 10 SameType Screen
+Style "*" PositionPlacement UnderMouse
+Exec exec xsetroot -solid "#777777"
+# Exec exec conky
+
+# IF YOU WANT FLAT THEN UNCOMMENT THESE
+Style "*" BorderWidth 2, HandleWidth 2
+BorderStyle Active -- Flat
+BorderStyle InActive -- Flat
+Style "*" ForeColor #000000
+Style "*" BackColor #000000
+
+HilightColor #000000 #000000
+InactiveColor #000000 #000000
+
+
+# OPENBSD STYLE
+# Style "*" BorderWidth 7, HandleWidth 7
+# HilightColor white blue
+# Style "*" ForeColor white
+# Style "*" BackColor darkred
+
+
+EdgeResistance 1000 0
+
+# Keybindings
+Key Q A 4 Close
+Key M A 4 Maximize
+Key H A 4 Iconify
+
+Key R A 4 Exec exec dmenu_run -nf '#FFFFFF' -nb '#000000' -sb '#FFFFFF' -sf '#000000' -fn 'Inconsolata 12' -p 'Run: '
+Key E A 4 Exec exec emacs
+Key B A 4 Exec exec tor-browser
+Key T A 4 Exec exec urxvt
+Key Print A N Exec exec flameshot gui
+
+Key 1 A 4 GotoPage 0 0
+Key 2 A 4 GotoPage 1 0
+Key 3 A 4 GotoPage 0 1
+Key 4 A 4 GotoPage 1 1
+Key R A C4 Restart
+
+Key 1 A C4 MoveToPage 0 0
+Key 2 A C4 MoveToPage 1 0
+Key 3 A C4 MoveToPage 0 1
+Key 4 A C4 MoveToPage 1 1
+
+DestroyFunc drag-n-move
+AddToFunc drag-n-move M move
+DestroyFunc drag-n-resize
+AddToFunc drag-n-resize M resize
+
+Mouse 1 W H4 drag-n-move
+Mouse 3 W H4 drag-n-resize
+Mouse 2 W H4 RaiseLower
+
+DesktopSize 2x2
+NoDesktopName
+# Module FvwmPager 0 0
+Style FvwmPager Sticky, StaysOnTop, FixedPosition, FixedSize, CirculateSkip, WindowListSkip
+*FvwmPager: Back #00008b
+*FvwmPager: Fore #ffffff
+*FvwmPager: Rows        0
+*FvwmPager: Columns      0
+*FvwmPager: Geometry    141x111-0-0
+*FvwmPager: WindowColors gray darkred white blue
+*FvwmPager: NoShapeLabels
+*FvwmPager: Hilight #292929
+*FvwmPager: WindowLabelFormat %t
+*FvwmPager: !SolidSeparators
+*FvwmPager: UseSkipList
+*FvwmPager: Font Unifont
+*FvwmPager: SmallFont Unifont
+*FvwmPager: NoShapeLabels
+*FvwmPager: Window3DBorders
+
+#Module FvwmIconMan *
+Style FvwmIconMan Sticky, StaysOnTop, FixedPosition, FixedSize, CirculateSkip, WindowListSkip
+
+*FvwmIconMan*Font Unifont
+*FvwmIconMan*ManagerGeometry 1x0-0+0
+*FvwmIconMan*DrawIcons True
+*FvwmIconMan*Foreground Pink
+
+# Menus
+DestroyMenu MenuFvwmRoot
+AddToMenu   MenuFvwmRoot "Menu" Title
++ "&URxvt" Exec exec urxvt
++ "&Emacs" Exec exec emacs
++ "&Thunar" Exec exec thunar
++ "" Nop
++ "&Tor" Exec exec tor-browser
++ "" Nop
++ "Re&fresh" Refresh
++ "&Restart" Restart
++ "&Quit" Module FvwmScript FvwmScript-ConfirmQuit
+
+
+
+

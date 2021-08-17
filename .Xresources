@@ -1,0 +1,15 @@
+URxvt.foreground: #000000
+URxvt.background: #ffffff
+URxvt.font:xft:Inconsolata:style=Regular:size=14
+URxvt.scrollBar: false
+URxvt.internalBorder: 7
+
+xterm*foreground: #000000
+xterm*background: #ffffff
+xterm*font:xft:Inconsolata:style=Regular:size=14
+xterm*savelines: 16384
+xTerm*alternateScroll: true
+XTerm*alternateScroll: true
+xterm*metaSendsEscape: true
+xterm*ScrollBar: false
+xterm*internalBorder: 10
